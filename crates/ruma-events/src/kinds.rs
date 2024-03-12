@@ -538,7 +538,7 @@ pub struct DecryptedMegolmV1Event<C: MessageLikeEventContent> {
 ///
 /// A non-redacted content also contains the `prev_content` from the unsigned event data.
 #[allow(clippy::exhaustive_enums)]
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Serialize)]
 pub enum FullStateEventContent<C: StaticStateEventContent + RedactContent> {
     /// Original, unredacted content of the event.
     Original {

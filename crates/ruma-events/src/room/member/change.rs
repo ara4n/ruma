@@ -1,4 +1,5 @@
 use ruma_common::{MxcUri, UserId};
+use serde::Serialize;
 
 use super::MembershipState;
 
@@ -76,7 +77,7 @@ pub enum MembershipChange<'a> {
 }
 
 /// A simple representation of a change, containing old and new data.
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Serialize)]
 #[allow(clippy::exhaustive_structs)]
 pub struct Change<T> {
     /// The old data.
